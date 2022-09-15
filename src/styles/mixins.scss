@@ -1,0 +1,19 @@
+@import "./theme.scss";
+
+@mixin flex($align: center, $justify: center, $direction: row, $gap: 5px) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin flex-center($direction: row, $gap: 5px) {
+    @include flex();
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+@mixin box-shadow() {
+    box-shadow: $shadow-elevation-high;
+}

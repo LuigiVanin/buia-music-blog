@@ -1,0 +1,40 @@
+@import "../mixins.scss";
+
+main {
+    margin-inline: auto;
+    width: 600px;
+    @include flex-center(column);
+
+    h1 {
+        margin-top: $v-spacing;
+        padding-block: 5px;
+        font-size: 32px;
+        font-weight: bold;
+        background: $linear-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    article.avatar {
+        @include box-shadow();
+        width: 250px;
+        height: 250px;
+        background-color: transparent;
+        border-radius: 50%;
+        background-image: url("../../assets/buia.png");
+        background-position: center;
+        background-size: cover;
+        margin-block: $v-spacing;
+    }
+
+    p.description {
+        padding-block: 10px;
+        padding-inline: 5px;
+    }
+
+    img {
+        margin-top: 15px;
+        height: 45px;
+    }
+}
