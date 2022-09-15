@@ -15,5 +15,21 @@
 }
 
 @mixin box-shadow() {
-    box-shadow: $shadow-elevation-high;
+    box-shadow: $shadow-elevation;
+}
+
+@mixin reset() {
+    margin: 0;
+    border: none;
+    padding: 0;
+    @include set-font();
+}
+
+@mixin set-font($font: "primary") {
+    @if $font == "primary" {
+        font-family: $primary-font;
+    }
+    @if $font == "secondary" {
+        font-family: $secondary-font;
+    }
 }

@@ -1,18 +1,36 @@
+@import "./theme.scss";
+
 :root {
-    --background-color: var(--dark-color);
-    --dark-color: #4e4e4e;
-    --light-color: #e0e0e0;
-    --font-color: black;
+    --background-color: var(--bg-dark-color);
+    --font-color: var(--light-font-color);
+    --image-color: var(--image-color);
+    --selector-color: var(--selector-light-color);
+    --selector-dark-color: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.205),
+        rgba(255, 255, 255, 0.096)
+    );
+    --selector-light-color: linear-gradient(
+        45deg,
+        rgba(59, 59, 59, 0.055),
+        rgba(56, 56, 56, 0.125)
+    );
+    --image-dark-color: invert(0);
+    --image-light-color: invert(1);
+    --bg-dark-color: #2f2f2f;
+    --bg-light-color: #f7f7f7;
+    --font-dark-color: rgb(230, 230, 230);
+    --font-light-color: rgb(39, 39, 39);
 }
 
 * {
     box-sizing: border-box;
-    color: var(--light-color);
+    color: var(--font-color);
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-    font-family: "Poppins", sans-serif;
+    font-family: $primary-font;
     background: var(--background-color);
 }

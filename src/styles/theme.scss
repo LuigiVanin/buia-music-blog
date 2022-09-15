@@ -1,13 +1,13 @@
-$shadow-color: rgba(54, 54, 54, 0.911);
+$shadow-color: rgba(0, 0, 0, 0.267);
 $shadow-elevation-low: 0px 0px 0.2px $shadow-color,
     0.2px 0.2px 0.3px -0.9px $shadow-color,
     0.5px 0.4px 0.8px -1.8px $shadow-color;
 $shadow-elevation-medium: 0px 0px 0.2px $shadow-color,
     0.4px 0.4px 0.7px -0.6px $shadow-color, 1px 0.9px 1.7px -1.2px $shadow-color,
     2.3px 2.2px 3.9px -1.8px $shadow-color;
-$shadow-elevation-high: 1px 1px 25px 0px $shadow-color;
+$shadow-elevation: 0px 0px 20px 0px $shadow-color;
 
-$v-spacing: 20px;
+$v-spacing: 15px;
 
 $linear-gradient: linear-gradient(
     50deg,
@@ -22,3 +22,12 @@ $linear-gradient: linear-gradient(
     hsl(15deg 100% 50%) 100%,
     hsl(0deg 100% 50%) 100%
 );
+
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "Roboto", sans-serif;
+
+$xsm: 5px;
+$sm: 10px;
+$md: 15px;
+$lg: 20px;
+$xlg: 25px;

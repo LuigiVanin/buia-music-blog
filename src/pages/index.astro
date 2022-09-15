@@ -3,24 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/pages/index.scss";
 import HomeHeader from "../components/HomeHeader";
 import MusicIcon from "../assets/musical-notes.svg";
+import ThemeToggle from "../components/ThemeToggle";
+import Divisor from "../components/Divisor.astro";
 ---
 
 <Layout title="Buias Home Page">
     <main>
         <h1>My personal Blog!</h1>
+
         <article class="avatar"></article>
+        <ThemeToggle client:load />
         <HomeHeader client:load />
 
+        <Divisor />
+
         <p class="description">
-            {"-"} Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. It has survived not only five centuries,
-            but also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of Letraset
-            sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
         </p>
 
         <img src={MusicIcon} alt="🎶" />

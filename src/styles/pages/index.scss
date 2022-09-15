@@ -7,6 +7,7 @@ main {
 
     h1 {
         margin-top: $v-spacing;
+        text-align: center;
         padding-block: 5px;
         font-size: 32px;
         font-weight: bold;
@@ -18,8 +19,8 @@ main {
 
     article.avatar {
         @include box-shadow();
-        width: 250px;
-        height: 250px;
+        width: 175px;
+        height: 175px;
         background-color: transparent;
         border-radius: 50%;
         background-image: url("../../assets/buia.png");
@@ -29,12 +30,20 @@ main {
     }
 
     p.description {
-        padding-block: 10px;
-        padding-inline: 5px;
+        width: 100%;
+        padding-inline: 15px;
+        font-size: 18px;
     }
 
     img {
-        margin-top: 15px;
-        height: 45px;
+        margin-top: 25px;
+        height: 35px;
+        filter: var(--image-color);
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 100%;
     }
 }

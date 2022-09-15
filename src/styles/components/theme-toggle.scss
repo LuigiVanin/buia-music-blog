@@ -1,0 +1,53 @@
+@import "../mixins.scss";
+@import "../theme.scss";
+
+.btn-group {
+    background: $linear-gradient;
+    width: 165px;
+    height: 45px;
+    border-radius: $md;
+    margin-bottom: $md;
+    @include flex($justify: space-between);
+    position: relative;
+
+    &::before {
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.903);
+        content: "";
+        position: absolute;
+        width: 50%;
+        transition: all 0.2s ease-in-out;
+        border-radius: 15px 15px 15px 15px;
+        @include box-shadow;
+    }
+
+    &.light::before {
+        left: 0;
+        height: 100%;
+    }
+
+    &.dark::before {
+        left: 50%;
+
+        height: 100%;
+    }
+    button {
+        flex: 1;
+        background: transparent;
+        @include reset();
+        @include flex-center();
+        @include reset();
+        cursor: pointer;
+        &:first-child {
+            border-right: 1px solid white;
+        }
+        &:last-child {
+            border-left: 1px solid white;
+        }
+        img {
+            @include reset();
+            filter: invert(1);
+            height: 26px;
+        }
+    }
+}
