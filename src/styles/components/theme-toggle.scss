@@ -17,19 +17,20 @@
         position: absolute;
         width: 50%;
         transition: all 0.2s ease-in-out;
-        border-radius: 15px 15px 15px 15px;
+        border-radius: 14px 14px 14px 14px;
         @include box-shadow;
     }
 
     &.light::before {
         left: 0;
         height: 100%;
+        // background: var(--bg-light-color);
     }
 
     &.dark::before {
         left: 50%;
-
         height: 100%;
+        // background: var(--bg-dark-color);
     }
     button {
         flex: 1;

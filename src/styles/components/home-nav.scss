@@ -12,7 +12,9 @@ header {
         @include flex-center($gap: 0px);
     }
 
-    p {
+    p,
+    a {
+        text-decoration: none;
         padding-inline: 15px;
         cursor: pointer;
         z-index: 2;
@@ -23,6 +25,7 @@ header {
             text-decoration: underline;
         }
     }
+
     .background {
         position: absolute;
         background: var(--selector-color);

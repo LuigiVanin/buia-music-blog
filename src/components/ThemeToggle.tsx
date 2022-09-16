@@ -1,32 +1,22 @@
 import { changeTheme, loadTheme, readTheme } from "../service/theme.service";
 import "../styles/components/theme-toggle.scss";
-import LightIcon from "../assets/sunny.svg";
-import DarkIcon from "../assets/moon.svg";
 import { useEffect, useState } from "react";
+import { useTheme } from "../hooks/useTheme";
 
 interface ThemeToggleProps {
-    sizeType?: "sm" | "md";
+    sizeType?: "sm" | "lg";
 }
 
-export default function ThemeToggle({ sizeType }: ThemeToggleProps) {
-    const [theme, setTheme] = useState("dark");
+export default function ThemeToggle({ sizeType = "sm" }: ThemeToggleProps) {
+    const { theme, action: changeThemeHandler } = useTheme();
 
-    useEffect(() => {
-        setTheme(readTheme());
-    }, []);
-
-    const changeThemeHandler = (value: ThemeColors) => {
-        console.log(value);
-        changeTheme(value);
-        setTheme(value);
-    };
     return (
-        <div className={`btn-group ${theme}`}>
+        <div className={`btn-group ${sizeType} ${theme}`}>
             <button onClick={() => changeThemeHandler("light")}>
-                <img src={LightIcon} alt="Light" />
+                <img src="assets/sunny.svg" alt="Light" />
             </button>
             <button onClick={() => changeThemeHandler("dark")}>
-                <img src={DarkIcon} alt="Dark" />
+                <img src="assets/moon.svg" alt="Dark" />
             </button>
         </div>
     );

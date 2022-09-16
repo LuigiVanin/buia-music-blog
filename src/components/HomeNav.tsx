@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import "../styles/components/home-header.scss";
+import "../styles/components/home-nav.scss";
 
-export default function HomeHeader() {
+//TODO: tranformar isso em um hook
+export default function HomeNav() {
     const [width, setWidth] = useState();
     const [left, setLeft] = useState();
     const selector = useRef(null);
@@ -30,7 +31,9 @@ export default function HomeHeader() {
             </div>
             |
             <div className="wrapper">
-                <p onMouseEnter={onHoverSelector}>Blog</p>
+                <a onMouseEnter={onHoverSelector} href="/blog/">
+                    Blog
+                </a>
             </div>
             |
             <div className="wrapper">

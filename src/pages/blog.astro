@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Buia's Blog";
+
+const posts = await Astro.glob("../content/*.md");
+---
+
+<Layout title={pageTitle}>
+    {
+        posts.map((item) => {
+            return <p>{item.frontmatter.title}</p>;
+        })
+    }
+</Layout>
