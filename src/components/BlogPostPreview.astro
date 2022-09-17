@@ -1,0 +1,17 @@
+---
+import "../styles/components/blog-post-preview.scss";
+
+interface Props {
+    title: string;
+    imagePath?: string;
+    path?: string;
+}
+
+const { imagePath, path, title } = Astro.props;
+---
+
+<div class="post">
+    <div class="post-preview" style={`background-image: url('${imagePath}');`}>
+        <img src={imagePath} alt="" />
+    </div>
+</div>

@@ -1,0 +1,41 @@
+@import "../mixins.scss";
+
+.post {
+    width: 100%;
+    @include flex-center();
+    .post-preview {
+        max-width: 450px;
+        width: 100%;
+        background-color: white;
+        height: 190px;
+        overflow: hidden;
+        position: relative;
+        border-radius: $lg;
+        @include box-shadow;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+        // adicionar blur no background
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            width: 450px;
+            transform: translateY(calc((-1) * (100% - 190px) / 2));
+            transition: all 0.05s ease-out;
+        }
+
+        &:hover {
+            img {
+                transform: translateY(calc((-1) * ((100%) - 190px))) scale(1.35)
+                    rotate(-10deg);
+            }
+        }
+    }
+
+    h1 {
+        color: black;
+    }
+}

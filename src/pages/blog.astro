@@ -1,14 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro";
-const pageTitle = "Buia's Blog";
+import BlogPostPreview from "../components/BlogPostPreview.astro";
+import LayoutWithHeader from "../layouts/LayoutWithHeader.astro";
+// import Layout from "../layouts/Layout.astro";
+import "../styles/pages/blog.scss";
+
+const pageTitle = "Blog posts";
 
 const posts = await Astro.glob("../content/*.md");
 ---
 
-<Layout title={pageTitle}>
-    {
-        posts.map((item) => {
-            return <p>{item.frontmatter.title}</p>;
-        })
-    }
-</Layout>
+<LayoutWithHeader title={pageTitle}>
+    <main>
+        <h1>Posts</h1>
+        <div class="posts-feed">
+            {
+                posts.map((post) => {
+                    return (
+                        <BlogPostPreview
+                            title={post.frontmatter.title}
+                            imagePath={post.frontmatter.imagePath}
+                            path={post.file}
+                        />
+                    );
+                })
+            }
+        </div>
+    </main>
+</LayoutWithHeader>

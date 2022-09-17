@@ -1,0 +1,12 @@
+---
+import Header from "../components/Header";
+import Layout from "./Layout.astro";
+import "../styles/pages/layout.scss";
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+    <Header />
+    <slot />
+</Layout>

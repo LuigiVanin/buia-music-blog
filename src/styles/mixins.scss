@@ -33,3 +33,10 @@
         font-family: $secondary-font;
     }
 }
+
+@mixin gradient-text($gradient: $linear-gradient) {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,27 @@
+@import "../mixins.scss";
+@import "../theme.scss";
+
+main {
+    margin-inline: auto;
+    width: 100%;
+
+    & > h1 {
+        font-weight: bold;
+        text-align: center;
+        padding-block: 35px;
+
+        font-size: 32px;
+        @include gradient-text();
+    }
+
+    .posts-feed {
+        width: 100%;
+        @include flex($direction: column, $gap: $xlg);
+    }
+}
+
+@media (min-width: 600px) {
+    main {
+        width: 600px;
+    }
+}
