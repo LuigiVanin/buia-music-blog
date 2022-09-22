@@ -7,6 +7,6 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-    <Header />
+    <Header client:load />
     <slot />
 </Layout>

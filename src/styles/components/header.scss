@@ -17,11 +17,52 @@ header {
         margin-inline: auto;
         padding-inline: 10px;
         @include flex($justify: space-between);
+        position: relative;
+
+        @import "./background-selector.scss";
+        .background {
+            height: 30px;
+        }
+
+        &:hover .background {
+            opacity: 1;
+        }
+
+        nav {
+            @include flex-center();
+            img {
+                filter: var(--image-color);
+                height: 26px;
+            }
+
+            ul {
+                @include flex-center($gap: 0px);
+                li {
+                    z-index: 10;
+
+                    a {
+                        padding-inline: 7px;
+                        text-align: center;
+                        width: 100%;
+                        text-decoration: none;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 600px) {
     header .wrapper {
         width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .wrapper nav ul li {
+        &:nth-child(n + 2) {
+            display: none;
+        }
     }
 }

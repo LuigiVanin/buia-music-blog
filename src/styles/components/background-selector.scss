@@ -1,0 +1,9 @@
+.background {
+    position: absolute;
+    background: var(--selector-color);
+    height: 40px;
+    transition: all 0.2s ease-in-out, opacity 0.1s ease-in-out;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 2;
+}

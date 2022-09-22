@@ -6,7 +6,7 @@
     width: 165px;
     height: 45px;
     border-radius: $md;
-    margin-bottom: $md;
+    // margin-bottom: $md;
     @include flex($justify: space-between);
     position: relative;
 
@@ -17,8 +17,15 @@
         position: absolute;
         width: 50%;
         transition: all 0.2s ease-in-out;
-        border-radius: 14px 14px 14px 14px;
         @include box-shadow;
+    }
+
+    &.lg::before {
+        border-radius: 14px;
+    }
+
+    &.sm::before {
+        border-radius: 5px;
     }
 
     &.light::before {

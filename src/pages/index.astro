@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/pages/index.scss";
-import HomeHeader from "../components/HomeNav";
+import HomeNav from "../components/HomeNav";
 import ThemeToggle from "../components/ThemeToggle";
 import Divisor from "../components/Divisor.astro";
 
@@ -15,7 +15,7 @@ const title = "My personal Blog!";
         <article class="avatar"></article>
 
         <ThemeToggle client:load />
-        <HomeHeader client:load />
+        <HomeNav client:load />
 
         <Divisor />
 

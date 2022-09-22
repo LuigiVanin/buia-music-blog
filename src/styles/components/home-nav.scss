@@ -2,6 +2,7 @@
 
 header {
     @include flex($justify: space-between);
+    margin-top: $md;
     width: 100%;
     height: 55px;
     // padding-inline: 5px;
@@ -14,6 +15,7 @@ header {
 
     p,
     a {
+        text-align: center;
         text-decoration: none;
         padding-inline: 15px;
         cursor: pointer;
@@ -44,5 +46,15 @@ header {
 @media (max-width: 600px) {
     header {
         width: 95%;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        a,
+        p {
+            font-size: 15px;
+            padding-inline: 9px;
+        }
     }
 }

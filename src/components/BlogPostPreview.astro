@@ -4,14 +4,32 @@ import "../styles/components/blog-post-preview.scss";
 interface Props {
     title: string;
     imagePath?: string;
-    path?: string;
+    path: string;
+    date?: string;
 }
 
-const { imagePath, path, title } = Astro.props;
+const { imagePath, path, title, date } = Astro.props;
+
+const getFileName = (path: string) => {
+    const filename = path.split("/").slice(-1)[0];
+    return filename.replace(".md", "");
+};
+
+const url = getFileName(path);
+
+console.log(url);
 ---
 
-<div class="post">
+<a class="post" href={url}>
     <div class="post-preview" style={`background-image: url('${imagePath}');`}>
         <img src={imagePath} alt="" />
+        <footer>
+            <h1>
+                {title}
+            </h1>
+            <p>
+                {date}
+            </p>
+        </footer>
     </div>
-</div>
+</a>
