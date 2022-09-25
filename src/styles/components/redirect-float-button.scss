@@ -1,0 +1,35 @@
+@import "../mixins.scss";
+@import "../theme.scss";
+
+.float {
+    @include flex-center;
+    position: fixed;
+    bottom: 30px;
+    right: 10%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: $linear-gradient;
+    @include box-shadow;
+    transition: all 0.2s ease-in-out;
+    animation: in 0.6s normal;
+
+    img {
+        height: 40px;
+        filter: invert(1);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes in {
+    0% {
+        transform: translateY(85px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

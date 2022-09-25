@@ -1,6 +1,7 @@
 @import "../mixins.scss";
 
 main {
+    font-family: "Poppins", sans-serif;
     margin-inline: auto;
     width: 600px;
     @include flex-center(column);
@@ -19,14 +20,15 @@ main {
 
     article.avatar {
         @include box-shadow();
-        width: 175px;
-        height: 175px;
+        width: 195px;
+        height: 195px;
         background-color: transparent;
         border-radius: 50%;
-        background-image: url("/images/buia.png");
+        background-image: url("/images/avatar.jpeg");
         background-position: center;
         background-size: cover;
         margin-block: $v-spacing;
+        animation: jumping 1.5s infinite;
     }
 
     p.description {
@@ -45,5 +47,19 @@ main {
 @media (max-width: 600px) {
     main {
         width: 100%;
+    }
+}
+
+@keyframes jumping {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(5px);
     }
 }

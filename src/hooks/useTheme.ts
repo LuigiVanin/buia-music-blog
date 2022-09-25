@@ -9,7 +9,6 @@ export const useTheme = () => {
     }, []);
 
     const changeThemeHandler = (value: ThemeColors) => {
-        console.log(value);
         changeTheme(value);
         setTheme(value);
     };

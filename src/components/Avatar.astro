@@ -1,0 +1,35 @@
+---
+---
+
+<article class="avatar"></article>
+
+<style lang="scss" scoped>
+    @import "../styles/mixins";
+
+    article.avatar {
+        @include box-shadow();
+        width: 195px;
+        height: 195px;
+        background-color: transparent;
+        border-radius: 50%;
+        background-image: url("/images/avatar.jpeg");
+        background-position: center;
+        background-size: cover;
+        margin-block: $v-spacing;
+        animation: jumping 1.5s infinite;
+    }
+
+    @keyframes jumping {
+        0% {
+            transform: translateY(5px);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(5px);
+        }
+    }
+</style>

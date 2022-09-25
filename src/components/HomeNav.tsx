@@ -15,7 +15,9 @@ export default function HomeNav() {
             </div>
             |
             <div className="wrapper">
-                <p onMouseEnter={onHoverSelector}>About Me</p>
+                <a onMouseEnter={onHoverSelector} href="/about-me/">
+                    About Me
+                </a>
             </div>
             |
             <div className="wrapper">

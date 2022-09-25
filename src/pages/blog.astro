@@ -6,7 +6,7 @@ import "../styles/pages/blog.scss";
 
 const pageTitle = "Blog posts";
 
-const posts = await Astro.glob("../content/*.md");
+const posts = await Astro.glob("../content/posts/*.md");
 ---
 
 <LayoutWithHeader title={pageTitle}>
@@ -20,7 +20,7 @@ const posts = await Astro.glob("../content/*.md");
                             title={post.frontmatter.title}
                             imagePath={post.frontmatter.imagePath}
                             date={post.frontmatter.pubDate}
-                            path={post.file}
+                            path={`/blog/${post.file}`}
                         />
                     );
                 })

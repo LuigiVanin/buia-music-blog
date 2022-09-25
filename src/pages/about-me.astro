@@ -1,0 +1,27 @@
+---
+import Avatar from "../components/Avatar.astro";
+import Header from "../components/Header";
+import * as About from "../content/about-me.md";
+import LayoutMarkDown from "../layouts/LayoutMarkDown.astro";
+---
+
+<LayoutMarkDown title="about me">
+    <Header client:load />
+
+    <main>
+        <h1 style={{ textAlign: "center" }}>Olá 👋, Eu sou Luis Vanin</h1>
+
+        <div class="avatar-wrapper">
+            <Avatar />
+        </div>
+        <About.Content />
+    </main>
+</LayoutMarkDown>
+
+<style lang="scss" scoped>
+    .avatar-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+</style>

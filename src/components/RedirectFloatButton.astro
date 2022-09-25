@@ -1,0 +1,13 @@
+---
+import "../styles/components/redirect-float-button.scss";
+
+interface Props {
+    href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href || "/home"} class="float">
+    <img src="/assets/arrow-back-outline.svg" alt="" />
+</a>
