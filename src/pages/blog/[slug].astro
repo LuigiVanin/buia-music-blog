@@ -1,2 +1,28 @@
 ---
+import { getFileName } from "../../utils/file";
+
+export const getStaticPaths = async ({ paginate, rss }: any) => {
+    const allPosts = await Astro.glob("../../content/*.md");
+    const paths = allPosts.map((post) => {
+        const slug = getFileName(post.file);
+        return {
+            params: {
+                slug,
+            },
+            props: {
+                post,
+            },
+        };
+    });
+
+    return paths;
+};
+
+const { post } = Astro.props;
+
+console.log(post);
 ---
+
+<h1>Hello</h1>
+
+<post.Content />

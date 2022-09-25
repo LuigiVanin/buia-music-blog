@@ -1,5 +1,6 @@
 ---
 import "../styles/components/blog-post-preview.scss";
+import { getFileName } from "../utils/file";
 
 interface Props {
     title: string;
@@ -9,11 +10,6 @@ interface Props {
 }
 
 const { imagePath, path, title, date } = Astro.props;
-
-const getFileName = (path: string) => {
-    const filename = path.split("/").slice(-1)[0];
-    return filename.replace(".md", "");
-};
 
 const url = getFileName(path);
 
