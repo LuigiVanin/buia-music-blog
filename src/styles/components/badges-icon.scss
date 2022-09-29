@@ -1,0 +1,30 @@
+@import "../theme.scss";
+@import "../mixins.scss";
+
+.badges-icons {
+    @include flex-center($gap: 10px);
+    font-size: 32px;
+    color: var(--font-color);
+    font-weight: 200;
+    margin-block: 10px;
+    margin-top: 15px;
+    a {
+        @include reset();
+        @include flex-center($direction: column);
+        height: 32px;
+        color: var(--image-color-logo);
+        img {
+            width: 32px;
+            filter: invert(1);
+            margin-top: 0px;
+            filter: var(--image-color-logo);
+        }
+
+        p {
+            @include reset();
+            font-size: 15px;
+            color: var(--font-color);
+            font-weight: 500;
+        }
+    }
+}

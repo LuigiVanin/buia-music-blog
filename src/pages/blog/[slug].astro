@@ -1,4 +1,5 @@
 ---
+import BlogHeader from "../../components/BlogHeader.astro";
 import Header from "../../components/Header";
 import RedirectFloatButton from "../../components/RedirectFloatButton.astro";
 import LayoutMarkDown from "../../layouts/LayoutMarkDown.astro";
@@ -29,6 +30,7 @@ console.log(post);
 
 <LayoutMarkDown title={post.frontmatter?.title || "Untitled Page"}>
     <Header client:load />
+    <BlogHeader {...post.frontmatter} />
     <main>
         <h1>Hello</h1>
         <div class="markdown">

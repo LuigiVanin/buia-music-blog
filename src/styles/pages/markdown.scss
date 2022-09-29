@@ -3,10 +3,20 @@
 body {
     @include reset;
     padding-top: 45px;
-    @include flex($align: start);
     width: 100%;
-
+    @include flex(center, start, column);
     main {
         width: 620px;
+        padding-inline: 10px;
+        min-height: calc(100vh - 250px - 105px);
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        main {
+            // background: red;
+            width: 100%;
+        }
     }
 }

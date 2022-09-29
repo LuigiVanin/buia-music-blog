@@ -1,0 +1,42 @@
+@import "../theme.scss";
+@import "../mixins.scss";
+
+footer {
+    width: 100%;
+    height: 250px;
+    background: $linear-gradient;
+    margin-top: 55px !important;
+    @include flex-center(column, 20px);
+
+    .author,
+    ul {
+        width: 80%;
+        @include flex(center, space-between, row);
+        color: white;
+        p,
+        li {
+            width: 50%;
+            text-align: center;
+
+            &:first-child {
+                text-align: start;
+            }
+
+            &:last-child {
+                text-align: end;
+            }
+        }
+    }
+
+    p,
+    ul,
+    li {
+        @include reset();
+        font-size: 15px;
+        color: white;
+    }
+
+    ul {
+        list-style: none;
+    }
+}

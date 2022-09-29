@@ -13,16 +13,21 @@ export default function Header() {
             <div className="wrapper">
                 <div className="background" ref={selector}></div>
                 <nav>
-                    <img src="/assets/musical-notes.svg" alt="music" />/
+                    <img
+                        className="logo"
+                        src="/assets/code-outline.svg"
+                        alt="music"
+                    />
+                    /
                     <ul>
                         <li onMouseOver={action}>
                             <a href="/">home</a>
                         </li>
                         <li onMouseOver={action}>
-                            <a href=""> about</a>
+                            <a href="/about-me"> about</a>
                         </li>
                         <li onMouseOver={action}>
-                            <a href=""> music</a>
+                            <a href=""> projects</a>
                         </li>
                     </ul>
                 </nav>

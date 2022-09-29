@@ -4,10 +4,10 @@
 .float {
     @include flex-center;
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 10%;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     background: $linear-gradient;
     @include box-shadow;
@@ -15,7 +15,7 @@
     animation: in 0.6s normal;
 
     img {
-        height: 40px;
+        height: 30px;
         filter: invert(1);
     }
 

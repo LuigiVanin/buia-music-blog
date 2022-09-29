@@ -27,7 +27,7 @@ export default function HomeNav() {
             </div>
             |
             <div className="wrapper">
-                <p onMouseEnter={onHoverSelector}>Music</p>
+                <p onMouseEnter={onHoverSelector}>Projects</p>
             </div>
         </header>
     );

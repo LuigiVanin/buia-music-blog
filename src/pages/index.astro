@@ -4,6 +4,7 @@ import "../styles/pages/index.scss";
 import HomeNav from "../components/HomeNav";
 import ThemeToggle from "../components/ThemeToggle";
 import Divisor from "../components/Divisor.astro";
+import SocialMediaBadges from "../components/SocialMediaBadges.astro";
 
 const title = "My personal Blog!";
 ---
@@ -17,7 +18,7 @@ const title = "My personal Blog!";
         <ThemeToggle client:load />
         <HomeNav client:load />
 
-        <Divisor />
+        <!-- <Divisor /> -->
 
         <p class="description">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -25,7 +26,8 @@ const title = "My personal Blog!";
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
         </p>
+        <SocialMediaBadges names={true} />
 
-        <img src="assets/musical-notes.svg" alt="🎶" />
+        <!-- <img class="logo" src="assets/code-outline.svg" alt="🎶" /> -->
     </main>
 </Layout>

@@ -35,12 +35,13 @@ main {
         width: 100%;
         padding-inline: 15px;
         font-size: 18px;
+        margin-top: 20px;
     }
 
     img {
-        margin-top: 25px;
+        margin-top: 15px;
         height: 35px;
-        filter: var(--image-color);
+        filter: var(--image-color-logo);
     }
 }
 

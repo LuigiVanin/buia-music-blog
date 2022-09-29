@@ -18,6 +18,10 @@ export const changeSiteTheming = (type: ThemeColors) => {
     body?.style.setProperty("--font-color", `var(--font-${type}-color)`);
     body?.style.setProperty("--image-color", `var(--image-${type}-color)`);
     body?.style.setProperty("--selector-color", `var(--selector-${type}-color`);
+    body?.style.setProperty(
+        "--image-color-logo",
+        `var(--image-${type}-color-logo)`
+    );
 };
 
 export const loadTheme = () => {

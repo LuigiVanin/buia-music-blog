@@ -32,7 +32,7 @@ header {
         nav {
             @include flex-center();
             img {
-                filter: var(--image-color);
+                filter: var(--image-color-logo);
                 height: 26px;
             }
 

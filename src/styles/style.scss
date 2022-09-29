@@ -1,9 +1,14 @@
 @import "./theme.scss";
+@import "./mixins.scss";
 
 :root {
     --background-color: var(--bg-dark-color);
     --font-color: var(--light-font-color);
     --image-color: var(--image-color);
+    --image-color-logo: var(--image-dark-color-logo);
+    --image-dark-color-logo: invert(1);
+    --image-light-color-logo: invert(0);
+
     --selector-color: var(--selector-light-color);
     --selector-dark-color: linear-gradient(
         45deg,
@@ -33,4 +38,8 @@ body {
     min-height: 100vh;
     font-family: $primary-font;
     background: var(--background-color);
+    @include reset;
+    padding-top: 45px;
+    width: 100%;
+    @include flex(center, start, column);
 }

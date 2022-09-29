@@ -1,0 +1,44 @@
+---
+import "../styles/components/badges-icon.scss";
+
+interface Props {
+    names?: boolean;
+    staticColors?: boolean;
+}
+
+const { names, staticColors } = Astro.props;
+
+const noNames = !!names || false;
+const colors = !!staticColors || false
+
+const buildStyles = () => {
+    return {
+        style: {
+            filter: colors ? "invert(1)" : "",
+            color: colors ? "white" : "",
+        }
+    }
+}
+
+const styles = buildStyles()
+---
+
+<div class="badges-icons">
+    <a href="https://github.com/LuigiVanin" target="_blank" style={{color: styles.style.color}}>
+        <img src="/assets/logo-github.svg" alt="" {...styles}  />
+        {noNames ? <></> : <p style={{color: styles.style.color}}>GitHub</p>}
+        
+    </a>
+    |
+    <a href="https://www.linkedin.com/in/luisfelipevanin/" target="_blank" style={{color: styles.style.color}}>
+        <img src="/assets/logo-linkedin.svg" alt="" {...styles} />
+        {noNames ? <></> : <p style={{color: styles.style.color}}>Linkdin</p>}
+        
+    </a>
+    |
+    <a href="https://twitter.com/Htnek_" target="_blank" style={{color: styles.style.color}}>
+        <img src="/assets/logo-twitter.svg" alt="" {...styles} />
+        {noNames ? <></> : <p style={{color: styles.style.color}}>Twitter</p>}
+        
+    </a>
+</div>

@@ -5,6 +5,7 @@ main {
     font-family: "Poppins", sans-serif;
     margin-inline: auto;
     width: 100%;
+    min-height: calc(100vh - 250px - 95px);
 
     & > h1 {
         font-weight: bold;
